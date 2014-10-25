@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Reminders!</h1>
+    <h2>Current list</h2>
+    <ul>
+    {% for i in items %}
+      <li>
+        <form action="" method="post">
+          <button type="submit">Delete</button><input type="hidden" name="todelete" value="{{ i }}">{{ i }}
+        </form>
+      </li>
+    {% endfor %}
+    </ul>
+    <h2>Test Form</h2>
+    <form action="" method="post">
+      <p><input size="60" type="text" name="item" placeholder="Add new reminder item"> <button type="submit">Add</button></p>
+    </form>
+  </body>
+</html>
